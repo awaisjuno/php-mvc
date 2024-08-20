@@ -14,11 +14,18 @@ class User extends Loader
         $this->userModel = new UserModel();
     }
 
-    function show()
+    function show($id)
     {
         $users = $this->userModel->fetchUser();
+        echo '<pre>';
         print_r($users);
+        echo '</pre>';
 
+    }
+
+    function hello()
+    {
+        echo "Hrll";
     }
 
     function insert()

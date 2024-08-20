@@ -1,6 +1,7 @@
 <?php
 
 spl_autoload_register(function ($class) {
+
     $prefixes = [
         'Lib\\' => __DIR__ . '/../system/lib/',
         'Driver' => __DIR__ . '/../system/driver',
