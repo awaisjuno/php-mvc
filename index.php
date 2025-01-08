@@ -1,22 +1,19 @@
 <?php
 
-    // Load configuration
-    $config = require __DIR__ . '/config/config.php';
+// Define the root directory constant
+define('ROOT_DIR', dirname(__DIR__));
 
-    // Define constants
-    define('BASE_URL', $config['base_url']);
-    define('BASE_PATH', $config['base_path']);
+//require_once '/system/helper.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/core/Route.php';
 
-    // Load autoload file
-    require_once BASE_PATH . '/config/autoload.php';
+use Core\Route;
 
-    // Load routes
-    $routes = require BASE_PATH . '/config/route.php';
+define('BASE_PATH', __DIR__ . '/');
 
-    // Initialize RequestHandler
-    $requestHandler = new \System\Request($config, $routes, BASE_PATH, BASE_URL);
+require_once 'config/route.php';
 
-    // Handle request
-    $requestHandler->handleRequest(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
+Route::dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
 
-?>
+// Start the application
+//$app = new App();

@@ -31,7 +31,7 @@
 
             <div class="text-center">
 
-                <h3><?= $msg?></h3>
+                <h3>Hello</h3>
 
             </div>
 

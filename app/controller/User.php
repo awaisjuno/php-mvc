@@ -14,26 +14,27 @@ class User extends Loader
         $this->userModel = new UserModel();
     }
 
-    function show($id)
+    function show($id, $name)
     {
         $users = $this->userModel->fetchUser();
-        echo '<pre>';
-        print_r($users);
-        echo '</pre>';
+        echo $name;
+        //echo '<pre>';
+        //print_r($users);
+        //echo '</pre>';
 
     }
 
     function hello()
     {
-        echo "Hrll";
+        echo "Hello";
     }
 
     function insert()
     {
         $data = array(
-            'first_name' => 'Awajf',
-            'last_name' => 'fef',
-            'email' => 'awwa@gmail.com',
+            'first_name' => 'AAA',
+            'last_name' => 'zzz',
+            'email' => 'xxx@gmail.com',
             'password' => '233435'
         );
         //Caling the Model to Insert Data

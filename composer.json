@@ -1,10 +1,17 @@
 {
     "name": "colab/mvc",
-    "description": "",
+    "description": "A custom MVC project",
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Colab\\Mvc\\": "src/"
+            "Colab\\Mvc\\": "src/",
+            "System\\": "system/",
+            "Controller\\": "app/controller/",
+            "Model\\": "app/model/",
+            "App\\": "app/",
+            "Core\\": "core/",
+            "System\\Cli\\": "cli",
+            "System\\Database\\": "database"
         }
     },
     "authors": [
@@ -13,6 +20,7 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "phpmailer/phpmailer": "^6.9"
     }
 }
